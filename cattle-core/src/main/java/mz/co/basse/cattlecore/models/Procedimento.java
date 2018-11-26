@@ -21,6 +21,9 @@ public class Procedimento {
 	@Column
 	private String nome;
 	
+	@Column
+	private String descricao;
+	
 	@OneToMany(mappedBy="procedimento")
 	private List<AnimalProcedimento> animalProcedimento = new ArrayList<AnimalProcedimento>();
 	
@@ -41,6 +44,14 @@ public class Procedimento {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 
 	public List<AnimalProcedimento> getAnimalProcedimento() {

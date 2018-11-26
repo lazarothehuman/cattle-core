@@ -18,7 +18,7 @@ public class Coral {
 	private Long id;
 	
 	@Column(nullable =false)
-	private String localizcao;
+	private String localizacao;
 	
 	@Column(nullable=false)
 	private String code;
@@ -37,12 +37,12 @@ public class Coral {
 		this.id = id;
 	}
 
-	public String getLocalizcao() {
-		return localizcao;
+	public String getLocalizacao() {
+		return localizacao;
 	}
 
-	public void setLocalizcao(String localizcao) {
-		this.localizcao = localizcao;
+	public void setLocalizacao(String localizcao) {
+		this.localizacao = localizcao;
 	}
 
 	public String getCode() {
