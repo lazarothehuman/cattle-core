@@ -13,4 +13,6 @@ public interface CattleManager {
 
 	void createProcedimento(Procedimento procedimento);
 
+	List<Procedimento> findProcedimentos(String nome, String descricao, Boolean active);
+
 }

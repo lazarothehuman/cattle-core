@@ -32,4 +32,8 @@ public class CattleManagerImp implements CattleManager {
 		
 	}
 
+	public List<Procedimento> findProcedimentos(String nome, String descricao, Boolean active) {
+		return procedimentoDao.find(nome,descricao,active);
+	}
+
 }
