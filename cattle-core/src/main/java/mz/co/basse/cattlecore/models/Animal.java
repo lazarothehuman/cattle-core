@@ -34,12 +34,6 @@ public class Animal {
 	@JoinColumn(nullable=false)
 	private Coral coral;
 	
-	@Column(nullable=false)
-	private Double peso;
-	
-	@Column(nullable=false)
-	private Double altura;
-	
 	@Column(unique=true)
 	private String code;
 	
@@ -64,6 +58,17 @@ public class Animal {
 	*/
 	@OneToMany(mappedBy="animal")
 	private List<AnimalProcedimento> animalProcedimento = new ArrayList<AnimalProcedimento>();
+	
+	@Enumerated(EnumType.STRING)
+	@Column(nullable = false)
+	private Classificacao classificacao;
+	
+	@Column(nullable = false)
+	private String cor;
+	
+	@Enumerated(EnumType.STRING)
+	@Column(nullable = false)
+	private Raca raca;
 	
 	@OneToOne(mappedBy="animal")
 	private Saida saida;
@@ -95,22 +100,6 @@ public class Animal {
 		this.coral = coral;
 	}
 
-	public Double getPeso() {
-		return peso;
-	}
-
-	public void setPeso(Double peso) {
-		this.peso = peso;
-	}
-
-	public Double getAltura() {
-		return altura;
-	}
-
-	public void setAltura(Double altura) {
-		this.altura = altura;
-	}
-
 	public String getCode() {
 		return code;
 	}
@@ -133,6 +122,30 @@ public class Animal {
 
 	public void setSexo(Sexo sexo) {
 		this.sexo = sexo;
+	}
+
+	public Classificacao getClassificacao() {
+		return classificacao;
+	}
+
+	public void setClassificacao(Classificacao classificacao) {
+		this.classificacao = classificacao;
+	}
+
+	public String getCor() {
+		return cor;
+	}
+
+	public void setCor(String cor) {
+		this.cor = cor;
+	}
+
+	public Raca getRaca() {
+		return raca;
+	}
+
+	public void setRaca(Raca raca) {
+		this.raca = raca;
 	}
 
 	public Animal getPai() {

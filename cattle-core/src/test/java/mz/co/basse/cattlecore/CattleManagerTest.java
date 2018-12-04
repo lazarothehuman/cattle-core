@@ -1,5 +1,6 @@
 package mz.co.basse.cattlecore;
 
+import java.util.Date;
 import java.util.List;
 
 import org.junit.Assert;
@@ -8,8 +9,13 @@ import org.junit.Test;
 
 import mz.co.basse.cattlecore.managers.CattleManager;
 import mz.co.basse.cattlecore.managers.CattleManagerImp;
+import mz.co.basse.cattlecore.models.Animal;
+import mz.co.basse.cattlecore.models.Classificacao;
 import mz.co.basse.cattlecore.models.Coral;
+import mz.co.basse.cattlecore.models.Gado;
 import mz.co.basse.cattlecore.models.Procedimento;
+import mz.co.basse.cattlecore.models.Raca;
+import mz.co.basse.cattlecore.models.Sexo;
 
 public class CattleManagerTest {
 	
@@ -40,6 +46,24 @@ public class CattleManagerTest {
 		procedimento.setDescricao("blablalba");
 		cattleManager.createProcedimento(procedimento);
 		Assert.assertNotNull(procedimento.getId());
+	}
+	
+	@Ignore
+	@Test
+	public void createAnimalTest() {//mudar para apenas um find
+		Coral coral = cattleManager.findCorais(Boolean.TRUE).get(0);
+		Animal animal = new Animal();
+		animal.setCor("Branco");
+		animal.setDataNascimento(new Date());
+		animal.setCoral(coral);
+		animal.setRaca(Raca.Brahman);
+		animal.setCode("112");
+		animal.setTipo(Gado.Bovino);
+		animal.setSexo(Sexo.Feminino);
+		animal.setClassificacao(Classificacao.Novilha);
+		cattleManager.createAnimal(animal);
+		Assert.assertNotNull(animal.getId());
+		
 	}
 	
 	
