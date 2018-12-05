@@ -28,4 +28,6 @@ public interface CattleManager {
 	List<Animal> findAnimais(String selectedCode, Classificacao selectedClassificacao, Raca selectedRaca,
 			Gado selectedTipo, Coral coral, Boolean true1);
 
+	void updateAnimal(Animal animal);
+
 }

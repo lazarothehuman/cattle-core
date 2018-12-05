@@ -69,7 +69,7 @@ public class CattleManagerTest {
 	public void findAnimalByCodeTest() {
 		Animal animal = cattleManager.findAnimal("112");
 		Assert.assertNotNull(animal);
-		Assert.assertEquals("Branco", animal.getCor());
+		Assert.assertEquals("Azul", animal.getCor());
 	}
 	
 	@Test
@@ -83,6 +83,16 @@ public class CattleManagerTest {
 		List<Animal> animais = cattleManager.findAnimais(null, null, Raca.Brahman, null, null, Boolean.TRUE);
 		Assert.assertNotNull(animais);
 		Assert.assertEquals(1, animais.size());
+	}
+	
+	@Ignore
+	@Test
+	public void updateAnimalTest() {
+		Animal animal = cattleManager.findAnimal("112");
+		animal.setCor("Azul");
+		cattleManager.updateAnimal(animal);
+		Assert.assertNotNull(animal);
+		Assert.assertEquals("Azul", animal.getCor());
 	}
 	
 	

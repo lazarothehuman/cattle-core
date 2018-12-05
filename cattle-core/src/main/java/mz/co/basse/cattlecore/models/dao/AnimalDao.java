@@ -17,4 +17,6 @@ public interface AnimalDao {
 	List<Animal> find(String selectedCode, Classificacao selectedClassificacao, Raca selectedRaca, Gado selectedTipo,
 			Coral coral, Boolean active);
 
+	void update(Animal animal);
+
 }

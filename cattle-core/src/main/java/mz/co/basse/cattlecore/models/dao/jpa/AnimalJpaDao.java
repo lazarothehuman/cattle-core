@@ -96,4 +96,11 @@ public class AnimalJpaDao implements AnimalDao {
 		entityManager.getTransaction().commit();
 		return typedQuery.getResultList();
 	}
+
+	public void update(Animal animal) {
+		entityManager.getTransaction().begin();
+		entityManager.merge(animal);
+		entityManager.getTransaction().commit();
+		
+	}
 }

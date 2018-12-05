@@ -63,4 +63,11 @@ public class CattleManagerImp implements CattleManager {
 		return animalDao.find(selectedCode,selectedClassificacao, selectedRaca, selectedTipo, coral, active);
 	}
 
+	public void updateAnimal(Animal animal) {
+		if (animal != null) {
+			animalDao.update(animal);
+		}
+		
+	}
+
 }
