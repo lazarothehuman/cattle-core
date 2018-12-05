@@ -63,7 +63,19 @@ public class CattleManagerTest {
 		animal.setClassificacao(Classificacao.Novilha);
 		cattleManager.createAnimal(animal);
 		Assert.assertNotNull(animal.getId());
-		
+	}
+	
+	@Test
+	public void findAnimalByCodeTest() {
+		Animal animal = cattleManager.findAnimal("112");
+		Assert.assertNotNull(animal);
+		Assert.assertEquals("Branco", animal.getCor());
+	}
+	
+	@Test
+	public void findCoralByCodeTest() {
+		Coral coral = cattleManager.findCoral("01");
+		Assert.assertNotNull(coral);
 	}
 	
 	

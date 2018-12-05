@@ -30,4 +30,16 @@ public class CoralJpaDao implements CoralDao {
 		return corals;
 	}
 
+	public Coral find(String code) {
+		TypedQuery<Coral> query = entityManager.createQuery("select coral from Coral coral where code = :code",
+				Coral.class);
+		query.setParameter("code", code);
+		List<Coral> corals = query.getResultList();
+		if (corals.isEmpty())
+			return null;
+		else
+			return corals.get(0);
+
+	}
+
 }

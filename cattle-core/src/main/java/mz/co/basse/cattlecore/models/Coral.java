@@ -12,20 +12,20 @@ import javax.persistence.OneToMany;
 
 @Entity
 public class Coral {
-	
+
 	@Id
-	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	@Column(nullable =false)
+
+	@Column(nullable = false)
 	private String localizacao;
-	
-	@Column(nullable=false)
+
+	@Column(nullable = false)
 	private String code;
-	
-	@OneToMany(mappedBy="coral")
+
+	@OneToMany(mappedBy = "coral")
 	private List<Animal> animais = new ArrayList<Animal>();
-	
+
 	@Column(nullable = false, columnDefinition = "bit")
 	private Boolean active = true;
 
@@ -67,6 +67,25 @@ public class Coral {
 
 	public void setActive(Boolean active) {
 		this.active = active;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this.code == ((Coral) obj).code)
+			return true;
+		else
+			return false;
+	}
+
+	@Override
+	public String toString() {
+		return code;
+	}
+
+	public void addAnimal(Animal animal) {
+		if (animal != null)
+			this.animais.add(animal);
+
 	}
 
 }

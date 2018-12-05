@@ -6,4 +6,6 @@ public interface AnimalDao {
 
 	void create(Animal animal);
 
+	Animal find(String code);
+
 }

@@ -47,4 +47,12 @@ public class CattleManagerImp implements CattleManager {
 		
 	}
 
+	public Animal findAnimal(String code) {
+		return animalDao.find(code);
+	}
+
+	public Coral findCoral(String coralCode) {
+		return coralDao.find(coralCode);
+	}
+
 }

@@ -10,4 +10,6 @@ public interface CoralDao {
 
 	List<Coral> find(Boolean active);
 
+	Coral find(String code);
+
 }

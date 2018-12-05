@@ -18,4 +18,8 @@ public interface CattleManager {
 
 	void createAnimal(Animal animal);
 
+	Animal findAnimal(String codePai);
+
+	Coral findCoral(String coralCode);
+
 }
