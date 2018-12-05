@@ -78,6 +78,13 @@ public class CattleManagerTest {
 		Assert.assertNotNull(coral);
 	}
 	
+	@Test
+	public void findAnimalWithParameters() {
+		List<Animal> animais = cattleManager.findAnimais(null, null, Raca.Brahman, null, null, Boolean.TRUE);
+		Assert.assertNotNull(animais);
+		Assert.assertEquals(1, animais.size());
+	}
+	
 	
 
 }

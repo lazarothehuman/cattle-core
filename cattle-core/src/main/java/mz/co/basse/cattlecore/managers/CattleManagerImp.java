@@ -3,8 +3,11 @@ package mz.co.basse.cattlecore.managers;
 import java.util.List;
 
 import mz.co.basse.cattlecore.models.Animal;
+import mz.co.basse.cattlecore.models.Classificacao;
 import mz.co.basse.cattlecore.models.Coral;
+import mz.co.basse.cattlecore.models.Gado;
 import mz.co.basse.cattlecore.models.Procedimento;
+import mz.co.basse.cattlecore.models.Raca;
 import mz.co.basse.cattlecore.models.dao.AnimalDao;
 import mz.co.basse.cattlecore.models.dao.CoralDao;
 import mz.co.basse.cattlecore.models.dao.ProcedimentoDao;
@@ -53,6 +56,11 @@ public class CattleManagerImp implements CattleManager {
 
 	public Coral findCoral(String coralCode) {
 		return coralDao.find(coralCode);
+	}
+
+	public List<Animal> findAnimais(String selectedCode, Classificacao selectedClassificacao, Raca selectedRaca,
+			Gado selectedTipo, Coral coral, Boolean active) {
+		return animalDao.find(selectedCode,selectedClassificacao, selectedRaca, selectedTipo, coral, active);
 	}
 
 }
