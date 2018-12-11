@@ -31,6 +31,7 @@ public class CattleManagerTest {
 		Assert.assertNotNull(coral.getId());
 	}
 	
+	@Ignore
 	@Test
 	public void findActiveCoralTest() {
 		List<Coral> corais = cattleManager.findCorais(true);
@@ -78,11 +79,19 @@ public class CattleManagerTest {
 		Assert.assertNotNull(coral);
 	}
 	
+	@Ignore
 	@Test
 	public void findAnimalWithParameters() {
 		List<Animal> animais = cattleManager.findAnimais(null, null, Raca.Brahman, null, null, Boolean.TRUE);
 		Assert.assertNotNull(animais);
 		Assert.assertEquals(1, animais.size());
+	}
+	
+	@Test
+	public void findProcedimentoWithParameters() {
+		List<Procedimento> procedimentos = cattleManager.findProcedimentos("blalbalba", null, true);
+		Assert.assertNotNull(procedimentos);
+		Assert.assertEquals(1, procedimentos.size());
 	}
 	
 	@Ignore

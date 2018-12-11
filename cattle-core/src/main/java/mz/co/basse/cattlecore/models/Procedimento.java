@@ -1,7 +1,6 @@
 package mz.co.basse.cattlecore.models;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -55,7 +54,7 @@ public class Procedimento {
 	}
 
 	public List<AnimalProcedimento> getAnimalProcedimento() {
-		return Collections.unmodifiableList(animalProcedimento);
+		return animalProcedimento;
 	}
 
 	public void setAnimalProcedimento(List<AnimalProcedimento> animalProcedimento) {
