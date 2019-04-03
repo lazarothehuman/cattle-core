@@ -39,4 +39,9 @@ public class TransactionJpaDao implements TransactionDao {
 		return transaction;
 	}
 
+	public List<Transaction> findAll(Boolean active) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

@@ -6,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 
 import mz.co.basse.cattlecore.models.Profile;
+import mz.co.basse.cattlecore.models.Transaction;
 import mz.co.basse.cattlecore.models.dao.ProfileDao;
 import mz.co.basse.cattlecore.utils.JPAUtil;
 
@@ -51,6 +52,11 @@ public class ProfileJpaDao implements ProfileDao {
 			return null;
 		else
 			return profiles;
+	}
+
+	public List<Profile> find(Transaction transaction, Boolean active) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 
+import mz.co.basse.cattlecore.models.Profile;
 import mz.co.basse.cattlecore.models.User;
 import mz.co.basse.cattlecore.models.dao.UserDao;
 import mz.co.basse.cattlecore.utils.JPAUtil;
@@ -38,6 +39,11 @@ public class UserJpaDao implements UserDao {
 			return null;
 		User user = users.get(0);
 		return user;
+	}
+
+	public List<User> find(String name, Profile profile, Boolean active) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

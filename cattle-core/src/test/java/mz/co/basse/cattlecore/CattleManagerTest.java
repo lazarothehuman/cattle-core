@@ -15,7 +15,9 @@ import mz.co.basse.cattlecore.models.Coral;
 import mz.co.basse.cattlecore.models.Gado;
 import mz.co.basse.cattlecore.models.Procedimento;
 import mz.co.basse.cattlecore.models.Raca;
+import mz.co.basse.cattlecore.models.Saida;
 import mz.co.basse.cattlecore.models.Sexo;
+import mz.co.basse.cattlecore.models.TipoSaida;
 
 public class CattleManagerTest {
 	
@@ -104,6 +106,17 @@ public class CattleManagerTest {
 		Assert.assertEquals("Azul", animal.getCor());
 	}
 	
+	
+	@Test
+	public void registerSaidaAnimaltest() {
+		Animal animal = cattleManager.findAnimal("112");
+		Saida saida = new Saida();
+		saida.setAnimal(animal);
+		saida.setNome("Saida");
+		saida.setDescricao("Vendido para ");
+		
+		
+	}
 	
 
 }

@@ -19,9 +19,9 @@
 			<property name="javax.persistence.jdbc.driver"
 				value="com.mysql.jdbc.Driver" />
 			<property name="javax.persistence.jdbc.url"
-				value="jdbc:mysql://localhost/cattle" />
+				value="jdbc:mysql://mysql3000.mochahost.com/basseld_cattle" />
 
-			<property name="javax.persistence.jdbc.user" value="cattle" />
+			<property name="javax.persistence.jdbc.user" value="basseld_cattle" />
 			<property name="javax.persistence.jdbc.password"
 				value="cattlemanagement1511" />
 			<!-- Configura��es espec�ficas do Hibernate -->

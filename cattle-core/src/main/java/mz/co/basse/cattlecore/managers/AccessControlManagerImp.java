@@ -26,12 +26,11 @@ public class AccessControlManagerImp implements AccessControlManager {
 	}
 
 	public List<Profile> findProfiles(Transaction transaction, Boolean active) {
-		return null;
+		return profileDao.find(transaction, active);
 	}
 
 	public List<Transaction> findTransactions() {
-		// TODO Auto-generated method stub
-		return null;
+		return transactionDao.findAll(Boolean.TRUE);
 	}
 
 	public void createOrUpdateProfile(Profile profile) {
@@ -46,8 +45,7 @@ public class AccessControlManagerImp implements AccessControlManager {
 	}
 
 	public List<User> findUsers(String name, Profile profile, Boolean active) {
-		// TODO Auto-generated method stub
-		return null;
+		return userDao.find(name, profile, active);
 	}
 
 	public User findUser(String login) {
